@@ -33,7 +33,9 @@
             }
             #minha-foto {
                 float: left;
-                height: 500px ;
+                height: 470px ;
+                padding: 18px;
+                background-color:rgb(245, 214, 235);
             }
             .myname{
                 text-align: center;
