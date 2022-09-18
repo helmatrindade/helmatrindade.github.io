@@ -31,4 +31,17 @@
             .number5{
                 font-size: 100%;
             }
+            #minha-foto {
+                float: left;
+                height: 500px ;
+            }
+            .image{
+                height: 500px;
+            }
+            .descricao{
+                left: 100px;
+            }
+            div{
+                border: 2px solid blue;
+            }
     
