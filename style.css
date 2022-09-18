@@ -38,7 +38,7 @@
                 float: left;
                 height: 46opx ;
                 padding: 18px;
-                background-color:rgb(245, 214, 235);
+                background-color:rgb(243, 219, 235);
             }
             .myname{
                 text-align: center;
@@ -51,6 +51,9 @@
                 position:absolute, fixed;
                 top: 50px;
                 right: 20%;
+            }
+            ul li:nth-child(odd) {
+                background-color: rgb(245, 185, 235);
             }
             
     
