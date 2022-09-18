@@ -31,9 +31,12 @@
             .number5{
                 font-size: 100%;
             }
+            body{
+                padding: 3%;
+            }
             #minha-foto {
                 float: left;
-                height: 470px ;
+                height: 46opx ;
                 padding: 18px;
                 background-color:rgb(245, 214, 235);
             }
@@ -42,8 +45,12 @@
             }
             .image{
                 height: 500px;
+                position: relative;
             }
-            div{
-                border: 2px solid blue;
+            .descricao{
+                position:absolute, fixed;
+                top: 50px;
+                right: 20%;
             }
+            
     
