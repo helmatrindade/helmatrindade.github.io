@@ -35,11 +35,11 @@
                 float: left;
                 height: 500px ;
             }
+            .myname{
+                text-align: center;
+            }
             .image{
                 height: 500px;
-            }
-            .descricao{
-                left: 100px;
             }
             div{
                 border: 2px solid blue;
