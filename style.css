@@ -1,0 +1,59 @@
+
+           p{
+            font-family: 'Dancing Script';
+            font-size: 195%;
+            color:rgb(46, 44, 44)
+           }
+           h1{
+            font-family:sans-serif;
+           }
+           body{
+            background-color:rgb(243, 224, 237);
+           }
+           h3{
+            font-size: 220%;
+           }
+           li{
+            font-size: 140%;
+           }
+           .number1{
+            font-size: 150%;
+           }
+           .number2{
+            font-size: 140%;
+           }
+           .number3{
+            font-size: 130%;
+           }
+           .number4{
+            font-size: 120%;
+           }
+            .number5{
+                font-size: 100%;
+            }
+            body{
+                padding: 3%;
+            }
+            #minha-foto {
+                float: left;
+                height: 46opx ;
+                padding: 18px;
+                background-color:rgb(243, 219, 235);
+            }
+            .myname{
+                text-align: center;
+            }
+            .image{
+                height: 500px;
+                position: relative;
+            }
+            .descricao{
+                position:absolute, fixed;
+                top: 50px;
+                right: 20%;
+            }
+            ul li:nth-child(odd) {
+                background-color: rgb(245, 185, 235);
+            }
+            
+    
