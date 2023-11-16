@@ -1,41 +1,185 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="preconnect"
-    href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4575dad1e4.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <br>
-    <h2>Índice</h2>
-    <a href="#helma1">Sobre mim</a></li><br>
-    <a href="#helma2">Minhas Habilidades</a></li><br>
-    <a href="#helma3">Site que gosto</a></li>
-    <br>
-    <div>
-    <h1 class="myname">Helma Trindade Caires Almeida</h1>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpeg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#portfolio">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Desenvolvedora Backend</p>
+                <h1>Oi, Sou <span>Helma</span> Trindade<br> de Paragominas-PA</h1>
+            </div>
+        </div>
+    </div>
+<!-- -----------sobre------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/sobre.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Sobre mim</h1><br>
+                    <p class="para">Olá, sou Helma, uma profissional em transição de carreira. Inicialmente, formei-me em Administração,
+                       mas minha paixão sempre foi a programação. Conquistei a certificação de Desenvolvedora Web Full Stack pela Trybe após um ano de estudo.<br><br>
+                       Sou uma pessoa curiosa e determinada, sempre buscando novos desafios e oportunidades de crescimento.
+                        Meu principal objetivo é crescer profissionalmente na área da programação e, ao mesmo tempo, ajudar as pessoas por meio dessa habilidade.<br><br>
+                         Tenho um forte desejo de proporcionar melhor qualidade de vida às pessoas e acredito que a programação é uma ferramenta poderosa para alcançar esse objetivo.
+                        Sou uma pessoa organizada e dedicada, que valoriza o trabalho em equipe e o bom relacionamento interpessoal.<br>
+                        Estou aberta a novas oportunidades e desafios e pronta para me dedicar ao máximo para alcançar meus objetivos.</p>
 
-    <div class="image">
-    <img src="myself.jpeg" alt="Helma Trindade, estudante de desenvolvimento Web" width="450px" id="minha-foto"> 
-    <p class="descricao"><a name="helma1">Olá, eu sou a Helma, uma baiana nascida no interior<br> da Bahia no ano de 1997, que reside atualmente<br> na cidade de Paragominas-PA, sempre fui curiosa,<br> dedicada e determinada a tudo que me proponho a fazer,<br> então decidi ir em busca de um sonho e com garra<br> e determinação, hoje sou estudante de Desenvolvimento Web.</a></p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('formacao')">Formação</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Desenvolmento Backend</span><br>Javascript, TypeScript, Java, Python, Node.js, Docker, Express.js</li>
+                            <li><span>Banco de Dados</span><br>MySQL</li>
+                            <li><span>API e Serviços Web</span><br>RESTfull</li>
+                            <li><span>Segurança</span><br>Autenticação, Autorização, jwt</li><br>
+                            <li><span>Desenvolvimento Frontend</span><br>HTML5, CSS3, React, Redux</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="formacao">
+                        <ul>
+                            <li><span>Administração</span><br>UNIP - Universidade Paulista</li>
+                            <li><span>Desenvolvimento Web Full Stack</span><br>Trybe</li>
+                            <li><span>Inglês - Nível Básico (em progresso)</span><br>Estudando com Teacher Ana Macedo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+<!-- -------------portfolio------------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Meus Projetos</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/wallet.jpeg">
+                <div class="layer">
+                    <h3>Trybe Wallet</h3>
+                    <p>Uma carteira de controle de gastos com conversor de moedas, desenvolvida em JavaScript com Redux e testes unitários.</p>
+                    <a href="https://github.com/helmatrindade/Project_Trybewallet"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/futebol.jpeg">
+                <div class="layer">
+                    <h3>Trybe Futebol Clube</h3>
+                    <p>No projeto Trybe Futebol Clube, desenvolveu-se um backend dockerizado usando TypeScript e Sequelize para modelagem de dados. A API, alinhada com as regras de negócio, requer autenticação por token para adição de partidas. Estabeleceu-se um relacionamento entre as tabelas "teams" e "matches". O banco de dados MySQL está em um container Docker, gerenciado pelo docker-compose. As Dockerfiles nas raízes do front-end e back-end garantem uma inicialização eficiente do projeto.</p>
+                    <a href="https://github.com/helmatrindade/Projeto_Futebol_Clube"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/api_de_blogs2.jpeg" class="img-api">
+                <div class="layer">
+                    <h3>API de Blogs</h3>
+                    <p>O projeto API de Blogs é um backend desenvolvido em JavaScript, utilizando Node.js e Sequelize para operações CRUD de posts. Implementa autenticação de usuário para postagem, com rotas como POST /login. Inclui categorias para posts, estabelecendo relações entre posts-categorias e categorias-posts. Migrations e modelos foram criados para users, categories, blog_posts e posts_categories, garantindo uma estrutura sólida para a gestão de conteúdo do blog.</p>
+                    <a href="https://github.com/helmatrindade/Project_API_de_Blogs"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            
+        </div>
+        <a href="https://github.com/helmatrindade?tab=repositories" class="btn">Ver mais</a>
     </div>
-    <h3><a name="helma2"><em>Habilidades</em></a></h3>
-    <ul>
-        <li class="number1"><strong><a href="myself.jpeg">Determinação</a></strong></li>
-        <li class="number2">Colaboração</li>
-        <li class="number3">Organização</li>
-        <li class="number4">Comunicação</li>
-        <li class="number5">Criatividade</li>
-    </ul>
-    <br>
-    <a name="helma3"> <a href="https://www.einerd.com.br/secao/cinema-tv/" target="_blank">Site que gosto!</a> </a>
+</div>
+<!-- --------------contato------------------ -->
+<div id="contato">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Me contate</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> helmacaires28@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> (91) 99144-5457</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/helma.trindad?igshid=MTk0NTkyODZkYg=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/helma-trindade/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://t.me/+5591991445457"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <a href="curriculo/curriculo.pdf" download class="btn btn2">Download Curriculo</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Seu nome" required>
+                    <input type="email" name="Email" placeholder="Seu email" required>
+                    <textarea name="Message" rows="6" placeholder="sua mensagem"></textarea>
+                    <button type="submit" class="btn btn2">Enviar</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        
+    }
+</script>  
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby2sZHP4pOdt6gXdSmOYUPWlZmDl8z9xH_YbpYVmhqDt_pGLJmhq9wF1nflEXlpb4Ys/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Mensagem enviada com sucesso!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
 </body>
-</html>
 
+</html>
